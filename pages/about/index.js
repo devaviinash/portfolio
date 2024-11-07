@@ -44,10 +44,12 @@ export const aboutData = [
       title: "awards",
       info: [
          {
+            key: 1,
             title: "Webby Awards - Honoree",
             stage: "2011 - 2012",
          },
          {
+            key: 2,
             title: "Adobe Design Achievement Awards - Finalist",
             stage: "2009 - 2010",
          },
@@ -57,14 +59,17 @@ export const aboutData = [
       title: "experience",
       info: [
          {
+            key: 3,
             title: "UX/UI Designer - XYZ Company",
             stage: "2012 - 2023",
          },
          {
+            key: 4,
             title: "Web Developer - ABC Agency",
             stage: "2010 - 2012",
          },
          {
+            key: 5,
             title: "Intern - DEF Corporation",
             stage: "2008 - 2010",
          },
@@ -74,14 +79,17 @@ export const aboutData = [
       title: "credentials",
       info: [
          {
+            key: 6,
             title: "Web Development - ABC University, LA, CA",
             stage: "2011",
          },
          {
+            key: 7,
             title: "Computer Science Diploma - AV Technical Institute",
             stage: "2009",
          },
          {
+            key: 8,
             title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
             stage: "2006",
          },
@@ -136,9 +144,9 @@ const About = () => {
                   exit="hidden"
                   className="max-w-[500px] mz-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
                >
-                  A couple of years ago I began coding. Since then, I've had the
-                  privilege of working on a diverse range of projects. Worked
-                  with a startup and a small agency as an intern.{" "}
+                  A couple of years ago I began coding. Since then, I have had
+                  the privilege of working on a diverse range of projects.
+                  Worked with a startup and a small agency as an intern.{" "}
                </motion.p>
                {/* counter */}
                <motion.div
