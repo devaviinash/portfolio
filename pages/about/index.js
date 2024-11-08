@@ -124,7 +124,7 @@ const About = () => {
                >
                   <div className="flex flex-1 xl:gap-x-6">
                      {[
-                        { label: "Years of experience", count: 2 },
+                        { label: "Months of experience", count: 8 },
                         { label: "Hours spent learning", count: 450 },
                         { label: "Finished Projects", count: 10 },
                      ].map((item, idx) => (
@@ -136,7 +136,7 @@ const About = () => {
                               <CountUp
                                  start={0}
                                  end={item.count}
-                                 duration={2}
+                                 duration={3}
                               />{" "}
                               +
                            </div>
