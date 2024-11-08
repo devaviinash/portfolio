@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import {
    FaHtml5,
    FaCss3,
-   FaJs,
-   FaReact,
+@@ -9,47 +9,45 @@ import {
    FaWordpress,
    FaFigma,
 } from "react-icons/fa";
@@ -28,18 +27,17 @@ export const aboutData = [
                <FaCss3 key="css3" />,
                <FaJs key="js" />,
                <FaReact key="react" />,
+               <SiNextdotjs key="nextjs" />,
                <SiFramer key="framer" />,
                <FaWordpress key="wordpress" />,
             ],
          },
          {
-            title: "Data Science",
+            title: "UI/UX Design",
             icons: [
-               <SiApachehadoop key="hadoop" />,
-               <SiHive key="hive" />,
-               <FaPython key="python" />,
-               <FaRuby key="ruby" />,
-               <FaTableau key="tableau" />,
+               <FaFigma key="figma" />,
+               <SiAdobexd key="adobexd" />,
+               <SiAdobephotoshop key="photoshop" />,
             ],
          },
       ],
@@ -52,8 +50,7 @@ export const aboutData = [
             title: "Adobe Design Achievement Awards - Finalist",
             stage: "2009 - 2010",
          },
-      ],
-   },
+@@ -58,73 +56,55 @@ export const aboutData = [
    {
       title: "experience",
       info: [
@@ -90,7 +87,6 @@ import CountUp from "react-countup";
 
 const About = () => {
    const [index, setIndex] = useState(0);
-
    return (
       <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
          <Circles />
@@ -109,8 +105,7 @@ const About = () => {
             <div className="flex-1 flex flex-col justify-center">
                <motion.h2
                   variants={fadeIn("right", 0.2)}
-                  initial="hidden"
-                  animate="show"
+@@ -133,8 +113,8 @@ const About = () => {
                   exit="hidden"
                   className="h2"
                >
@@ -119,11 +114,7 @@ const About = () => {
                   a time.
                </motion.h2>
                <motion.p
-                  variants={fadeIn("right", 0.4)}
-                  initial="hidden"
-                  animate="show"
-                  exit="hidden"
-                  className="max-w-[500px] mz-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+@@ -146,9 +126,9 @@ const About = () => {
                >
                   A couple of years ago I began coding. Since then, I have had
                   the privilege of working on a diverse range of projects.
@@ -133,8 +124,7 @@ const About = () => {
                <motion.div
                   variants={fadeIn("right", 0.6)}
                   initial="hidden"
-                  animate="show"
-                  exit="hidden"
+@@ -157,86 +137,81 @@ const About = () => {
                   className="hidden md:flex md:max-w-xl xl:max-w-none mx:auto xl:mx-0 mb-8"
                >
                   <div className="flex flex-1 xl:gap-x-6">
@@ -216,8 +206,3 @@ const About = () => {
                </div>
             </motion.div>
          </div>
-      </div>
-   );
-};
-
-export default About;
