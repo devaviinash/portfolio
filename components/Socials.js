@@ -13,7 +13,7 @@ const Socials = () => {
    return (
       <div className="flex items-center gap-x-5 text-lg">
          <Link
-            href={""}
+            href={"https://www.instagram.com/aanjali_1397/"}
             className="hover:text-accent transition-all duration-300"
          >
             <RiInstagramLine />
@@ -31,7 +31,7 @@ const Socials = () => {
             <RiLinkedinLine />
          </Link>
          <Link
-            href={""}
+            href={"https://github.com/Anjalirana341"}
             className="hover:text-accent transition-all duration-300"
          >
             <RiGithubLine />
