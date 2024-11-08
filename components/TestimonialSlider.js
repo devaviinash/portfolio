@@ -5,21 +5,21 @@ const testimonialSlider = [
       name: "Anne Smith",
       position: "Customer",
       message:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+         "Her analytical acumen and innovative problem-solving make her a standout in data science. She has an exceptional ability to extract meaningful insights from complex datasets, driving impactful results.",
    },
    {
       image: "/t-avt-2.png",
       name: "Jane Doe",
       position: "Customer",
       message:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+         "Her mastery of data modeling and visualization is complemented by her strategic approach to tackling challenges. Her commitment to excellence and her enthusiasm for uncovering actionable insights make her an invaluable asset to any team",
    },
    {
       image: "/t-avt-3.png",
       name: "Jhon Doe",
       position: "Customer",
       message:
-         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+         "Her passion for data science is evident in her meticulous attention to detail and her drive to deliver meaningful results. Her enthusiasm and dedication inspire everyone around her.",
    },
 ];
 
