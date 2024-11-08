@@ -46,19 +46,19 @@ export const aboutData = [
    {
       title: "certificates",
       info: [
-         { title: "Intern at Byzwiz", stage: "2024" },
+         { title: "Intern at Byzwiz", stage: "- 2024" },
          {
             title: "Intern at Man Trucks",
-            stage: "2024",
+            stage: "- 2024",
          },
       ],
    },
    {
       title: "experience",
       info: [
-         { title: "Intern - Byzwiz", stage: "2024" },
-         { title: "Smart India hackathon*", stage: "2024" },
-         { title: "Intern - ManTrucks(on-going)", stage: "2024" },
+         { title: "Intern - Byzwiz", stage: "- 2024" },
+         { title: "Smart India hackathon*", stage: "- 2024" },
+         { title: "Intern - ManTrucks(on-going)", stage: "- 2024" },
       ],
    },
 ];
