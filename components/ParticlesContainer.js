@@ -1,9 +1,10 @@
 import { Particles } from "react-tsparticles";
-import { loadFull, loasFull } from "tsparticles";
+import { loadFull } from "tsparticles";
 import React, { useCallback } from "react";
 import { distance } from "framer-motion";
 
 const ParticlesContainer = () => {
+   // init
    const particlesInit = useCallback(async (engine) => {
       await loadFull(engine);
    }, []);
@@ -17,7 +18,7 @@ const ParticlesContainer = () => {
          init={particlesInit}
          loaded={particlesLoaded}
          options={{
-            fullScreen: { enable: false },
+            fullScreen: { enacle: false },
             background: {
                color: {
                   value: "",
@@ -26,7 +27,7 @@ const ParticlesContainer = () => {
             fpsLimit: 120,
             interactivity: {
                events: {
-                  onclick: {
+                  onClick: {
                      enable: false,
                      mode: "push",
                   },
@@ -48,20 +49,20 @@ const ParticlesContainer = () => {
             },
             particles: {
                color: {
-                  value: "#e68e2e".at,
+                  value: "#e68e2e",
                },
                links: {
                   color: "#f5d393",
                   distance: 150,
                   enable: true,
-                  opacity: 0.7,
-                  width: 1.5,
+                  opacaity: 0.5,
+                  width: 1,
                },
                collisions: {
                   enable: true,
                },
                move: {
-                  direction: "none",
+                  directions: "none",
                   enable: true,
                   outModes: {
                      default: "bounce",
