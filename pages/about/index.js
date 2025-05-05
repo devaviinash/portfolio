@@ -6,14 +6,19 @@ import {
    FaCss3,
    FaJs,
    FaReact,
-   FaWordpress,
-   FaFigma,
+   FaNodeJs,
+   FaBootstrap,
 } from "react-icons/fa";
 import {
    SiNextdotjs,
    SiFramer,
-   SiAdobexd,
-   SiAdobephotoshop,
+   SiMongodb,
+   SiTailwindcss,
+   SiTypescript,
+   SiGreensock,
+   SiMysql,
+   SiFirebase,
+   SiPostgresql,
 } from "react-icons/si";
 
 // Data
@@ -22,43 +27,59 @@ export const aboutData = [
       title: "skills",
       info: [
          {
-            title: "Web Development",
+            title: "Frontend services",
             icons: [
                <FaHtml5 key="html5" />,
                <FaCss3 key="css3" />,
                <FaJs key="js" />,
                <FaReact key="react" />,
-               <SiNextdotjs key="nextjs" />,
-               <SiFramer key="framer" />,
-               <FaWordpress key="wordpress" />,
+               <FaBootstrap key="bootstrap" />,
+               <SiTailwindcss key="tailwind" />,
+               <SiGreensock key="gsap" />,
+               <SiFramer key="framer-motion" />,
             ],
          },
          {
-            title: "UI/UX Design",
+            title: "Backend services",
             icons: [
-               <FaFigma key="figma" />,
-               <SiAdobexd key="adobexd" />,
-               <SiAdobephotoshop key="photoshop" />,
+               <FaNodeJs key="node" />,
+               <SiNextdotjs key="next" />,
+               <SiTypescript key="typescript" />,
             ],
          },
-      ],
-   },
-   {
-      title: "certificates",
-      info: [
-         { title: "Intern at Byzwiz", stage: "- 2024" },
          {
-            title: "Intern at Man Trucks",
-            stage: "- 2024",
+            title: "Database",
+            icons: [
+               <SiMongodb key="mongodb" />,
+               <SiFirebase key="firebase" />,
+               <SiPostgresql key="postgresql" />,
+            ],
          },
       ],
    },
    {
       title: "experience",
       info: [
-         { title: "Intern - Byzwiz", stage: "- 2024" },
-         { title: "Smart India hackathon*", stage: "- 2024" },
-         { title: "Intern - ManTrucks(on-going)", stage: "- 2024" },
+         {
+            title: "Mandir Trust Web Platform",
+            stage: "- 2025",
+         },
+         {
+            title: "Guru Nanak Dental",
+            stage: "- 2025",
+         },
+         {
+            title: "Avinomad 3D T-Shirt Customizer",
+            stage: "- 2024",
+         },
+         {
+            title: "Zentrry Gaming Portfolio Clone",
+            stage: "- 2024",
+         },
+         {
+            title: "RedCyberFox",
+            stage: "- 2024",
+         },
       ],
    },
 ];
@@ -99,9 +120,8 @@ const About = () => {
                   exit="hidden"
                   className="h2"
                >
-                  Turning chaos into{" "}
-                  <span className="text-accent">patterns</span>, one dataset at
-                  a time.
+                  Building the <span className="text-accent">Web </span>One
+                  Pixel at a Time a time 🛠️
                </motion.h2>
                <motion.p
                   variants={fadeIn("right", 0.4)}
@@ -112,7 +132,7 @@ const About = () => {
                >
                   A couple of years ago I began coding. Since then, I have had
                   the privilege of working on a diverse range of projects.
-                  Worked with a startup and a small agency as an intern.
+                  Worked with a multiple clients and few companies.
                </motion.p>
                {/* Counters */}
                <motion.div
@@ -124,8 +144,8 @@ const About = () => {
                >
                   <div className="flex flex-1 xl:gap-x-6">
                      {[
-                        { label: "Months of experience", count: 8 },
-                        { label: "Hours spent learning", count: 450 },
+                        { label: "Years of experience", count: 2 },
+                        { label: "Hours spent coding", count: 3000 },
                         { label: "Finished Projects", count: 10 },
                      ].map((item, idx) => (
                         <div

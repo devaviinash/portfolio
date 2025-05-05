@@ -26,8 +26,8 @@ const Home = () => {
                   exit="hidden"
                   className="h1"
                >
-                  Transforming Data <br /> Into{" "}
-                  <span className="text-accent">Clear Insights</span>
+                  Get a Premium Website <br /> Into{" "}
+                  <span className="text-accent">For your Business</span>
                </motion.h1>
                {/* subtitile */}
                <motion.p
@@ -37,9 +37,8 @@ const Home = () => {
                   exit="hidden"
                   className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
                >
-                  Fusing Data with Expertise to Build Models that Provide
-                  Accurate Predictions and Transform Business Challenges into
-                  Opportunities.
+                  Creating Stunning Websites that Transform Your Business
+                  Presence and Convert Visitors into Loyal Customers.
                </motion.p>
                {/* btn */}
                <motion.div className="flex justify-center xl:hidden relative">

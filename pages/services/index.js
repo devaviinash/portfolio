@@ -31,9 +31,9 @@ const Services = () => {
                      exit="hidden"
                      className="mb-4 max-w-[400px] mx-auto lg:mx-0 "
                   >
-                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Unde incidunt qui esse tempore vel provident delectus.
-                     Porro reprehenderit ipsa eveniet!
+                     Get modern responsive websites with stunning designs and a
+                     professional online presence crafted using React and
+                     Next.js as showcased my projects. 🫰
                   </motion.p>
                </div>
                {/* slider */}

@@ -28,9 +28,8 @@ const Work = () => {
                      exit="hidden"
                      className="mb-4 max-w-[400px] mx-auto lg:mx-0 "
                   >
-                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Unde incidunt qui esse tempore vel provident delectus.
-                     Porro reprehenderit ipsa eveniet!
+                     Designing User-Centric Websites That Boost Engagement and
+                     Drive Conversions! ☺️
                   </motion.p>
                </div>
 

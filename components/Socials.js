@@ -8,39 +8,45 @@ import {
    RiInstagramLine,
    RiFacebookLine,
    RiTwitterLine,
+   RiWhatsappLine,
+   RiMailAddFill,
+   RiMailFill,
+   RiTwitterXLine,
 } from "react-icons/ri";
 const Socials = () => {
    return (
       <div className="flex items-center gap-x-5 text-lg">
          <Link
-            href={"https://www.instagram.com/aanjali_1397/"}
+            href={"https://www.instagram.com/aviii_1122"}
             className="hover:text-accent transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
          >
             <RiInstagramLine />
          </Link>
          <Link
-            href={""}
+            href={"https://github.com/devaviinash"}
             className="hover:text-accent transition-all duration-300"
-         >
-            <RiFacebookLine />
-         </Link>
-         <Link
-            href={""}
-            className="hover:text-accent transition-all duration-300"
-         >
-            <RiLinkedinLine />
-         </Link>
-         <Link
-            href={"https://github.com/Anjalirana341"}
-            className="hover:text-accent transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
          >
             <RiGithubLine />
          </Link>
          <Link
-            href={""}
+            href={"https://x.com/AviinashChavan"}
             className="hover:text-accent transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
          >
-            <RiTwitterLine />
+            <RiTwitterXLine />
+         </Link>
+         <Link
+            href={"mailto:avinashchavan0436@gmail.com"}
+            className="hover:text-accent transition-all duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+         >
+            <RiMailFill />
          </Link>
       </div>
    );

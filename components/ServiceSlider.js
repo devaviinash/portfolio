@@ -24,27 +24,29 @@ const serviceData = [
    {
       icon: <RxCrop />,
       title: "Branding",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Build a trusted online identity that stands out",
    },
    {
       icon: <RxPencil2 />,
       title: "Design",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Receive stunning, user-friendly interfaces that engage",
    },
    {
       icon: <RxDesktop />,
       title: "Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Gain fast, responsive websites with React and Next.js",
    },
    {
       icon: <RxReader />,
       title: "Copywriting",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+         "Capture your audience with clear & compelling content designed for impact",
    },
    {
       icon: <RxRocket />,
       title: "SEO",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description:
+         "Boost visibility through optimized websites driving traffic & growth effortlessly.",
    },
 ];
 
