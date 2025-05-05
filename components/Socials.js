@@ -15,7 +15,7 @@ import {
 } from "react-icons/ri";
 const Socials = () => {
    return (
-      <div className="flex items-center gap-x-5 text-lg">
+      <div className="flex items-center gap-x-5 text-xl lg:text-2xl">
          <Link
             href={"https://www.instagram.com/aviii_1122"}
             className="hover:text-accent transition-all duration-300"

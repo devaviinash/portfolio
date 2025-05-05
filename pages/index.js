@@ -14,10 +14,10 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
    return (
-      <div className="bg-primary/60 h-full ">
+      <div className="bg-primary/60 h-full">
          {/* text */}
          <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-            <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto ">
+            <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
                {/* title */}
                <motion.h1
                   variants={fadeIn("down", 0.2)}
@@ -26,8 +26,9 @@ const Home = () => {
                   exit="hidden"
                   className="h1"
                >
-                  Get a Premium Website <br /> Into{" "}
-                  <span className="text-accent">For your Business</span>
+                  Get a <span className="text-accent">Premium Website</span>{" "}
+                  <br />
+                  For your Business
                </motion.h1>
                {/* subtitile */}
                <motion.p
@@ -56,7 +57,7 @@ const Home = () => {
             </div>
          </div>
          {/* image */}
-         <div className="w-[1200px] h-full absolute right-0 bottom-0">
+         <div className="w-[1500px] h-full absolute right-0 bottom-0">
             {/* bg img */}
             <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 "></div>
             {/* particles */}
@@ -68,7 +69,7 @@ const Home = () => {
                animate="show"
                exit="hidden"
                transition={{ duration: 1, ease: "easeInOut" }}
-               className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[3%]"
+               className="w-full h-full max-w-[650px] max-h-[650px] absolute -bottom-5 lg:bottom-[0%] lg:right-[13%]"
             >
                <Avatar />
             </motion.div>

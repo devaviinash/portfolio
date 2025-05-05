@@ -61,24 +61,19 @@ export const aboutData = [
       title: "experience",
       info: [
          {
-            title: "Mandir Trust Web Platform",
-            stage: "- 2025",
+            title: "Mandir Trust Web Platform - 2025",
          },
          {
-            title: "Guru Nanak Dental",
-            stage: "- 2025",
+            title: "Housai Global Exim - 2025",
          },
          {
-            title: "Avinomad 3D T-Shirt Customizer",
-            stage: "- 2024",
+            title: "Guru Nanak Dental - 2024",
          },
          {
-            title: "Zentrry Gaming Portfolio Clone",
-            stage: "- 2024",
+            title: "Avinomad 3D T-Shirt Customizer - 2024",
          },
          {
-            title: "RedCyberFox",
-            stage: "- 2024",
+            title: "Zentrry Gaming Portfolio Clone - 2024",
          },
       ],
    },
@@ -120,8 +115,8 @@ const About = () => {
                   exit="hidden"
                   className="h2"
                >
-                  Building the <span className="text-accent">Web </span>One
-                  Pixel at a Time a time 🛠️
+                  Building the <span className="text-accent">Web </span> <br />
+                  One Pixel at a Time a time 🛠️
                </motion.h2>
                <motion.p
                   variants={fadeIn("right", 0.4)}
@@ -144,7 +139,7 @@ const About = () => {
                >
                   <div className="flex flex-1 xl:gap-x-6">
                      {[
-                        { label: "Years of experience", count: 2 },
+                        { label: "Days of experience", count: 745 },
                         { label: "Hours spent coding", count: 3000 },
                         { label: "Finished Projects", count: 10 },
                      ].map((item, idx) => (
@@ -202,7 +197,6 @@ const About = () => {
                         <div className="font-light mb-2 md:mb-0">
                            {item.title}
                         </div>
-                        <div>{item.stage}</div>
                         {/* Icons */}
                         {item.icons && (
                            <div className="flex gap-x-4">

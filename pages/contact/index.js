@@ -1,6 +1,7 @@
 //components
 import Circles from "../../components/Circles";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 //icons
 import { BsArrowRight } from "react-icons/bs";
@@ -15,24 +16,59 @@ const Contact = () => {
    const [formData, setFormData] = useState({
       name: "",
       email: "",
+      phone: "",
       subject: "",
       message: "",
    });
    const [isSubmitting, setIsSubmitting] = useState(false);
-   const [submitStatus, setSubmitStatus] = useState("");
 
    const handleChange = (e) => {
       const { name, value } = e.target;
-      setFormData((prev) => ({
-         ...prev,
-         [name]: value,
-      }));
+      if (name === "phone") {
+         // Only allow numbers, spaces, and basic phone number characters
+         const formattedValue = value.replace(/[^\d\s+()-]/g, "");
+         setFormData((prev) => ({
+            ...prev,
+            [name]: formattedValue,
+         }));
+      } else {
+         setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+         }));
+      }
    };
 
    const handleSubmit = async (e) => {
       e.preventDefault();
+
+      // Validate phone number length
+      if (formData.phone.replace(/[^\d]/g, "").length < 10) {
+         toast.error("Please enter a valid phone number (at least 10 digits)", {
+            duration: 4000,
+            position:
+               window.innerWidth < 1024 ? "bottom-center" : "bottom-right",
+            style: {
+               background: "#ef4444",
+               color: "#fff",
+               borderRadius: "10px",
+               marginBottom: window.innerWidth < 1024 ? "80px" : "20px",
+            },
+         });
+         return;
+      }
+
       setIsSubmitting(true);
-      setSubmitStatus("");
+
+      const loadingToast = toast.loading("Sending your message...", {
+         position: window.innerWidth < 1024 ? "bottom-center" : "bottom-right",
+         style: {
+            background: "rgba(74, 34, 189, 0.9)",
+            color: "#fff",
+            borderRadius: "10px",
+            marginBottom: window.innerWidth < 1024 ? "80px" : "20px",
+         },
+      });
 
       try {
          const response = await fetch("/api/send", {
@@ -45,32 +81,68 @@ const Contact = () => {
 
          const data = await response.json();
          if (response.ok) {
-            setSubmitStatus("Message sent successfully!");
-            setFormData({ name: "", email: "", subject: "", message: "" });
+            toast.success(
+               "Message sent successfully! I will get back to you soon.",
+               {
+                  duration: 4000,
+                  position:
+                     window.innerWidth < 1024
+                        ? "bottom-center"
+                        : "bottom-right",
+                  style: {
+                     background: "rgba(74, 34, 189, 0.9)",
+                     color: "#fff",
+                     borderRadius: "10px",
+                     marginBottom: window.innerWidth < 1024 ? "80px" : "20px",
+                  },
+               }
+            );
+            setFormData({
+               name: "",
+               email: "",
+               phone: "",
+               subject: "",
+               message: "",
+            });
          } else {
-            setSubmitStatus("Failed to send message. Please try again.");
+            toast.error("Failed to send message. Please try again.", {
+               duration: 4000,
+               position:
+                  window.innerWidth < 1024 ? "bottom-center" : "bottom-right",
+               style: {
+                  background: "#ef4444",
+                  color: "#fff",
+                  borderRadius: "10px",
+                  marginBottom: window.innerWidth < 1024 ? "80px" : "20px",
+               },
+            });
          }
       } catch (error) {
-         setSubmitStatus("Failed to send message. Please try again.");
+         toast.error("Failed to send message. Please try again.", {
+            duration: 4000,
+            position:
+               window.innerWidth < 1024 ? "bottom-center" : "bottom-right",
+            style: {
+               background: "#ef4444",
+               color: "#fff",
+               borderRadius: "10px",
+               marginBottom: window.innerWidth < 1024 ? "80px" : "20px",
+            },
+         });
       } finally {
+         toast.dismiss(loadingToast);
          setIsSubmitting(false);
       }
    };
 
    return (
-      <div className="hfull flex bg-primary/30">
+      <div className="h-full flex bg-primary/30">
+         <Toaster />
          <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-            <div className="flex flex-col w-full max-w-[700px]">
+            <div className="flex flex-col gap-y-2 w-full max-w-[700px]">
                <h2 className="h2 text-center mb-2">
                   Lets <span className="text-accent">connect.</span>
                </h2>
-               {submitStatus && (
-                  <p
-                     className={`text-center mb-4 ${submitStatus.includes("success") ? "text-green-500" : "text-red-500"}`}
-                  >
-                     {submitStatus}
-                  </p>
-               )}
                <form
                   onSubmit={handleSubmit}
                   className="flex-1 flex flex-col gap-6 w-full mx-auto"
@@ -81,7 +153,7 @@ const Contact = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="name"
+                        placeholder="Name"
                         className="input"
                         required
                      />
@@ -90,20 +162,24 @@ const Contact = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="email"
+                        placeholder="Email"
                         className="input"
                         required
                      />
                   </div>
-                  <input
-                     type="text"
-                     name="subject"
-                     value={formData.subject}
-                     onChange={handleChange}
-                     placeholder="subject"
-                     className="input"
-                     required
-                  />
+                  <div className="flex gap-x-6 w-full">
+                     <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Phone Number"
+                        pattern="[0-9\s+()-]{10,}"
+                        title="Please enter a valid phone number"
+                        className="input"
+                        required
+                     />
+                  </div>
                   <textarea
                      name="message"
                      value={formData.message}
