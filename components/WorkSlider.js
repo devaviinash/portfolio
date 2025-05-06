@@ -72,67 +72,64 @@ const WorkSlider = () => {
       );
       setTimeout(() => {
          router.push("/contact");
-      }, 50);
+      }, 1000);
    };
 
    return (
-      <>
-         <Toaster />
-         <Swiper
-            spaceBetween={10}
-            pagination={{
-               clickable: true,
-            }}
-            modules={[Pagination]}
-            className="h-[350px] sm:h-[550px]"
-         >
-            {workSlides.slides.map((slide, index) => {
-               return (
-                  <SwiperSlide key={index}>
-                     <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-                        {slide.images.map((image, index) => {
-                           return (
+      <Swiper
+         spaceBetween={10}
+         pagination={{
+            clickable: true,
+         }}
+         modules={[Pagination]}
+         className="h-[350px] sm:h-[550px]"
+      >
+         {workSlides.slides.map((slide, index) => {
+            return (
+               <SwiperSlide key={index}>
+                  <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+                     {slide.images.map((image, index) => {
+                        return (
+                           <div
+                              key={image.path}
+                              className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                              onClick={handleImageClick}
+                           >
                               <div
-                                 key={image.path}
-                                 className="relative rounded-lg overflow-hidden flex items-center justify-center group"
-                                 onClick={handleImageClick}
+                                 className="flex items-center justify-center relative overflow-hidden group"
+                                 key={index}
                               >
-                                 <div
-                                    className="flex items-center justify-center relative overflow-hidden group"
-                                    key={index}
-                                 >
-                                    {/* images */}
-                                    <Image
-                                       src={image.path}
-                                       width={500}
-                                       height={400}
-                                       alt=""
-                                    />
-                                    {/* overlay gradient */}
-                                    <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                                    {/* title */}
-                                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 w-full text-center">
-                                       <div className="flex items-center justify-center gap-x-2 text-[10px] sm:text-[13px] tracking-[0.2em]">
-                                          {/* titlepart 1 */}
-                                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-100">
-                                             {image.t1}
-                                          </div>
-                                          {/* titlepart 2 */}
-                                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                                             {image.t2}
-                                          </div>
+                                 {/* images */}
+                                 <Image
+                                    src={image.path}
+                                    width={500}
+                                    height={400}
+                                    alt=""
+                                 />
+                                 {/* overlay gradient */}
+                                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                                 {/* title */}
+                                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1 group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 w-full text-center">
+                                    <div className="flex items-center justify-center gap-x-2 text-[10px] sm:text-[13px] tracking-[0.2em]">
+                                       {/* titlepart 1 */}
+                                       <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-100">
+                                          {image.t1}
+                                       </div>
+                                       {/* titlepart 2 */}
+                                       <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                                          {image.t2}
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                           );
-                        })}
-                     </div>
-                  </SwiperSlide>
-               );
-            })}
-         </Swiper>
-      </>
+                           </div>
+                        );
+                     })}
+                  </div>
+               </SwiperSlide>
+            );
+         })}
+      </Swiper>
    );
 };
 

@@ -42,7 +42,7 @@ const Home = () => {
                   Presence and Convert Visitors into Loyal Customers.
                </motion.p>
                {/* btn */}
-               <motion.div className="flex justify-center xl:hidden relative scale-90 sm:scale-100">
+               <motion.div className="flex justify-center xl:hidden relative scale-90 sm:scale-100 z-10">
                   <ProjectsBtn />
                </motion.div>
                <motion.div
