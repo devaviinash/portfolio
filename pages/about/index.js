@@ -73,7 +73,7 @@ export const aboutData = [
             title: "Avinomad 3D T-Shirt Customizer - 2024",
          },
          {
-            title: "Zentrry Gaming Portfolio Clone - 2024",
+            title: "Zentrry Gaming Portfolio Clone - 2023",
          },
       ],
    },
@@ -125,9 +125,9 @@ const About = () => {
                   exit="hidden"
                   className="max-w-[500px] mz-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
                >
-                  A couple of years ago I began coding. Since then, I have had
-                  the privilege of working on a diverse range of projects.
-                  Worked with a multiple clients and few companies.
+                  Three years ago I began coding. Since then, I have had the
+                  privilege of working on a diverse range of projects. Worked
+                  with a multiple clients and few companies.
                </motion.p>
                {/* Counters */}
                <motion.div
