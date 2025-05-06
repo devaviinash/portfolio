@@ -60,7 +60,7 @@ const WorkSlider = () => {
       toast.success(
          "Please contact me through the contact form to get live project links!",
          {
-            duration: 5000,
+            duration: 4000,
             position: isMobile ? "bottom-center" : "bottom-right",
             style: {
                background: "rgba(74, 34, 189, 0.9)",
@@ -72,7 +72,7 @@ const WorkSlider = () => {
       );
       setTimeout(() => {
          router.push("/contact");
-      }, 2000);
+      }, 50);
    };
 
    return (

@@ -46,14 +46,32 @@ const Header = () => {
 
                {/* mobile menu overlay */}
                <div
-                  className={`fixed inset-0 bg-black/90 z-40 lg:hidden transition-all duration-300 ${
+                  className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-500 ease-in-out backdrop-blur-md bg-gradient-to-b from-black/80 to-black/60 ${
                      mobileMenuOpen
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
                   }`}
                >
-                  <div className="flex flex-col items-center justify-center h-full">
-                     <div className="mb-8 scale-150">
+                  <div className="flex flex-col items-center justify-center h-full px-6">
+                     {/* avatar circle */}
+                     <div className="flex flex-col items-center justify-center mb-8">
+                        <div className="relative w-40 h-40 rounded-full ring-4 ring-accent shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-105">
+                           <Image
+                              src="/mobile-avatar.jpg"
+                              alt="avatar"
+                              layout="fill"
+                              className="object-cover"
+                           />
+                        </div>
+                        {/* name display */}
+                        <div className="text-center mt-6 font-[Outfit]">
+                           <h2 className="text-3xl font-medium tracking-wide text-white opacity-90 uppercase">
+                              Avinash Chavan
+                           </h2>
+                           <div className="mx-auto mt-3 w-16 h-1 bg-white/30 rounded-full"></div>
+                        </div>
+                     </div>
+                     <div className="mb-10 scale-125">
                         <Socials />
                      </div>
                   </div>

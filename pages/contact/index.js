@@ -184,7 +184,7 @@ const Contact = () => {
                      name="message"
                      value={formData.message}
                      onChange={handleChange}
-                     placeholder="message"
+                     placeholder="Message"
                      className="textarea"
                      required
                   ></textarea>
