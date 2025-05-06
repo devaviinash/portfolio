@@ -25,7 +25,7 @@ const Header = () => {
 
                {/* hamburger menu for mobile */}
                <button
-                  className="lg:hidden z-50 p-1"
+                  className="lg:hidden z-50 p-2"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                >
                   <div
@@ -46,7 +46,7 @@ const Header = () => {
 
                {/* mobile menu overlay */}
                <div
-                  className={`fixed inset-0 z-50 lg:hidden transition-opacity duration-500 ease-in-out backdrop-blur-md bg-gradient-to-b from-black/80 to-black/60 ${
+                  className={`fixed inset-0 z-40 lg:hidden transition-opacity duration-500 ease-in-out backdrop-blur-md bg-gradient-to-b from-indigo-950/90 to-black/50 ${
                      mobileMenuOpen
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
@@ -55,7 +55,7 @@ const Header = () => {
                   <div className="flex flex-col items-center justify-center h-full px-6">
                      {/* avatar circle */}
                      <div className="flex flex-col items-center justify-center mb-8">
-                        <div className="relative w-40 h-40 rounded-full ring-4 ring-accent shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-105">
+                        <div className="relative w-44 h-44 rounded-full ring-2 ring-red-500 shadow-2xl overflow-hidden transition-transform duration-500 hover:scale-105">
                            <Image
                               src="/mobile-avatar.jpg"
                               alt="avatar"
@@ -68,7 +68,7 @@ const Header = () => {
                            <h2 className="text-3xl font-medium tracking-wide text-white opacity-90 uppercase">
                               Avinash Chavan
                            </h2>
-                           <div className="mx-auto mt-3 w-16 h-1 bg-white/30 rounded-full"></div>
+                           <div className="mx-auto mt-3 w-16 h-1 bg-red-600 rounded-full"></div>
                         </div>
                      </div>
                      <div className="mb-10 scale-125">
