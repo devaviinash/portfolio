@@ -47,6 +47,10 @@
    transition: filter 0.3s ease;
 }
 
+.red-first-letter {
+   color: red;
+}
+
 @layer base {
    body {
       @apply overflow-hidden leading-relaxed text-[14px] sm:text-base;
