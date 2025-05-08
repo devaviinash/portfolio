@@ -5,7 +5,7 @@ import Circles from "../../components/Circles";
 
 const Apps = () => {
    return (
-      <div className="h-full bg-primary/30 overflow-y-auto py-32 flex items-center">
+      <div className="h-full bg-primary/30 py-32 flex items-center">
          <Circles />
          <div className="container mx-auto">
             <div className="flex flex-col gap-y-8">

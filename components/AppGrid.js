@@ -89,7 +89,7 @@ const AppGrid = () => {
 
    return (
       <>
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-accent/80 scrollbar-track-accent/20 p-4 rounded-lg">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 max-h-[60vh] overflow-y-auto scrollbar-thin scrollbar-thumb-accent/80 scrollbar-track-accent/20 p-4 pb-24 rounded-lg">
             {apps.map((app) => (
                <motion.div
                   key={app.id}
@@ -147,7 +147,7 @@ const AppGrid = () => {
 
          {/* Modal */}
          {selectedApp && (
-            <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-2 sm:p-4 overflow-y-auto">
+            <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-2 sm:p-4">
                <motion.div
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -166,7 +166,7 @@ const AppGrid = () => {
                            fill
                            className="object-cover object-center"
                            priority
-                           quality={100}
+                           quality={95}
                         />
                         {/* Gradient Overlay - ensuring full coverage */}
                         <div className="absolute inset-0 bg-gradient-to-b from-[rgba(42,14,97,0)] via-[rgba(42,14,97,0.8)] to-[#11042C]"></div>

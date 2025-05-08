@@ -140,7 +140,7 @@ const About = () => {
                   <div className="flex flex-1 xl:gap-x-6">
                      {[
                         { label: "Days of experience", count: 745 },
-                        { label: "Hours spent coding", count: 3000 },
+                        { label: "Hours spent coding", count: 3489 },
                         { label: "Finished Projects", count: 10 },
                      ].map((item, idx) => (
                         <div
